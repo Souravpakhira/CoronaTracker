@@ -16,7 +16,8 @@ export const fetchData = async states => {
     const modifiedData = {
       confirmed: parseInt(data.Confirmed),
       recovered: data.Cured,
-      deaths: data.Death
+      deaths: data.Death,
+      time: data.lastUpdate
     };
     return modifiedData;
   } catch (error) {
