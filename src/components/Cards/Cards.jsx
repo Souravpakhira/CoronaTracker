@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import cx from "classnames";
 import styles from "./Cards.module.css";
 
-const Cards = ({ data: { confirmed, recovered, deaths } }) => {
+const Cards = ({ data: { confirmed, recovered, deaths,time } }) => {
   if (!confirmed) {
     return "Loding..";
   }
@@ -29,6 +29,7 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
             <Typography variant="h5">
               <CountUp start={0} end={confirmed} duration={2.5} separator="," />
             </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of active cases from COVID-19
             </Typography>
@@ -49,6 +50,7 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
             <Typography variant="h5">
               <CountUp start={0} end={recovered} duration={2.5} separator="," />
             </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of recoveries from COVID-19
             </Typography>
@@ -69,6 +71,7 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
             <Typography variant="h5">
               <CountUp start={0} end={deaths} duration={2.5} separator="," />
             </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of Deaths caused by COVID-19
             </Typography>
